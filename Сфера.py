@@ -12,15 +12,16 @@ def draw(screen):
 
 
 if __name__ == '__main__':
-    n = int(input())
-    pygame.init()
-    size = width, height = 300, 300
-    pygame.display.set_caption('Сфера')
-    screen = pygame.display.set_mode(size)
-    draw(screen)
-    pygame.display.flip()
-    while pygame.event.wait().type != pygame.QUIT:
-        pass
-    pygame.quit()
-# except Exception:
-#     print('Неправильный формат ввода')
+    try:
+        n = int(input())
+        pygame.init()
+        size = width, height = 300, 300
+        pygame.display.set_caption('Сфера')
+        screen = pygame.display.set_mode(size)
+        draw(screen)
+        pygame.display.flip()
+        while pygame.event.wait().type != pygame.QUIT:
+            pass
+        pygame.quit()
+    except Exception:
+        print('Неправильный формат ввода')
